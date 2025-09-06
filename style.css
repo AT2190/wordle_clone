@@ -1,0 +1,49 @@
+/* Page background and text color */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #121213; /* dark mode style */
+  color: white;
+}
+
+/* Game board grid layout */
+#game-board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr); /* 6 rows for 6 guesses */
+  gap: 10px;
+  margin: 20px auto;
+  width: max-content;
+}
+
+/* Each row of tiles */
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 60px); /* 5 letters per word */
+  gap: 5px;
+}
+
+/* Individual tile (letter square) */
+.tile {
+  width: 60px;
+  height: 60px;
+  border: 2px solid gray;
+  font-size: 2em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a3a3c; /* Default dark gray */
+}
+
+/* Tile colors for feedback */
+.correct {
+  background-color: green; /* Right letter, right spot */
+}
+
+.present {
+  background-color: goldenrod; /* Right letter, wrong spot */
+}
+
+.absent {
+  background-color: #555; /* Letter not in word */
+}
